@@ -1,6 +1,6 @@
 "use client";
 
-import { TextField, Button, Callout, Text } from "@radix-ui/themes";
+import { TextField, Button, Callout } from "@radix-ui/themes";
 import SimpleMDE from "react-simplemde-editor";
 import { useForm, Controller } from "react-hook-form";
 import axios from "axios";
@@ -15,7 +15,7 @@ import ButtonSpinner from "@/app/components/ButtonSpinner";
 
 type IssueForm = z.infer<typeof createIssueSchema>;
 
-export default function NewIssuePage() {
+export const NewIssuePage = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
